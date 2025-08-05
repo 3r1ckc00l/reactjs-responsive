@@ -1,26 +1,37 @@
 @font-face {
-  font-family: SchibstedGrotesk-ExtraBold; src: url(/public/fonts/SchibstedGrotesk-ExtraBold.ttf);
+  font-family: SchibstedGrotesk-ExtraBold;
+  src: url(/public/fonts/SchibstedGrotesk-ExtraBold.ttf);
 }
+
 @font-face {
-  font-family: SchibstedGrotesk-Medium; src: url(/public/fonts/SchibstedGrotesk-Medium.ttf);
+  font-family: SchibstedGrotesk-Medium;
+  src: url(/public/fonts/SchibstedGrotesk-Medium.ttf);
 }
+
 @font-face {
-  font-family: SchibstedGrotesk-Regular; src: url(/public/fonts/SchibstedGrotesk-Regular.ttf);
+  font-family: SchibstedGrotesk-Regular;
+  src: url(/public/fonts/SchibstedGrotesk-Regular.ttf);
 }
+
 @font-face {
-  font-family: SchibstedGrotesk-SemiBold; src: url(/public/fonts/SchibstedGrotesk-SemiBold.ttf);
+  font-family: SchibstedGrotesk-SemiBold;
+  src: url(/public/fonts/SchibstedGrotesk-SemiBold.ttf);
 }
+
 @font-face {
-  font-family: SchibstedGrotesk-SemiBoldItalic; src: url(/public/fonts/SchibstedGrotesk-SemiBoldItalic.ttf);
+  font-family: SchibstedGrotesk-SemiBoldItalic;
+  src: url(/public/fonts/SchibstedGrotesk-SemiBoldItalic.ttf);
 }
 
 /* 
 Body Background: Sets a semi-transparent light gray background for the entire webpage body.
 */
 body {
-  background-color: rgba(200, 198, 198, 0.6);
+  background-color: #fff;
   font-family: SchibstedGrotesk-Regular, Georgia, serif;
+  color: #000;
 }
+
 a {
   text-decoration: none;
 }
@@ -28,10 +39,11 @@ a {
 /* 
 Navbar Container: Styles the navigation bar container, employing flexbox for a space-between layout and a dark background color.
 */
-.navBarContainer{
+.navBarContainer {
   display: flex;
   justify-content: space-between;
   background-color: #333;
+  color: #f2f2f2;
 }
 
 .topnav {
@@ -50,8 +62,9 @@ Logo and Navigation Links: Defines styles for the logo, navigation links, and ho
   font-style: italic;
   margin: 15px 0;
 }
-.logo > .second-text {
-  color:red;
+
+.logo>.second-text {
+  color: red;
 }
 
 .topnav a {
@@ -89,7 +102,7 @@ Mobile Responsive Styles: Introduces styles for a vertical navigation bar, popup
   top: 0;
   right: 0;
   width: 100%;
-  height: 100% ;
+  height: 100%;
   background-color: rgba(63, 63, 63, 0.6);
 }
 
@@ -115,6 +128,7 @@ Mobile Responsive Styles: Introduces styles for a vertical navigation bar, popup
   display: flex;
   flex-direction: column;
 }
+
 .mainContent {
   padding-top: 25px;
 }
@@ -143,6 +157,7 @@ Mobile Responsive Styles: Introduces styles for a vertical navigation bar, popup
 .verticalNav {
   overflow: hidden;
   background-color: #333;
+  color: #f2f2f2;
 }
 
 .verticalNav a {
@@ -184,6 +199,24 @@ Grid Containers for Content: Defines a grid layout for the overall content, crea
   width: 100%;
 }
 
+.main-heading {
+  color: #fff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-family: SchibstedGrotesk-Medium, Georgia, serif;
+  font-size: 54px;
+}
+
+.main-heading.black {
+  color: #000;
+}
+
+.second-heading {
+  color: #fff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
 .heading2 {
   color: #333;
   border-bottom: 2px solid #efefef;
@@ -192,28 +225,38 @@ Grid Containers for Content: Defines a grid layout for the overall content, crea
 }
 
 .paragraph {
-  color: #666;
+  color: #000;
   line-height: 1.6;
   text-align: justify;
+  font-family: SchibstedGrotesk-Medium, Georgia, serif;
+  font-size: 20px;
 }
 
 /* custom style */
 .overview_nogrid {
   padding: 20px;
 }
-.overAllcontent.black_bg {
+
+.overview_nogrid.half-screen {
+  width: 60% !important;
+}
+
+.overAllcontent.black_bg,
+.overAllcontent.black_bg .paragraph {
   background-color: #000;
   color: #fff;
 }
-.overview_nogrid > .paragraph, .overview_nogrid > .heading2 {
-  color: #fff;
+
+.overview_nogrid>.paragraph,
+.overview_nogrid>.heading2 {
+  color: #000;
 }
 
 /* 
 Footer Styling: Styles the footer with a fixed position at the bottom, a dark background, and white text. The social media icons are displayed in a flex layout for a clean and centered appearance.
 */
 .footer {
-  background-color: #333; 
+  background-color: #333;
   color: white;
   text-align: center;
   position: fixed;
@@ -227,7 +270,8 @@ Footer Styling: Styles the footer with a fixed position at the bottom, a dark ba
   justify-content: center;
   padding-bottom: 5px;
 }
-.icons > span {
+
+.icons>span {
   padding-left: 15px;
 }
 
@@ -255,11 +299,11 @@ Media Query for Mobile Responsiveness: Adjusts styles for mobile responsiveness,
   }
 
   .heading {
-      font-size: 25px;
-      padding-bottom: 0px;
-      margin-bottom: 0px;
+    font-size: 25px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
-  
+
   .overview {
     padding: 10px;
   }

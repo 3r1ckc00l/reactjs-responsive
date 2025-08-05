@@ -13,7 +13,7 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
-{/* 
+  {/* 
 To track the window dimensions:
 Window Dimensions Tracking Function : getCurrentDimension() retrieves the current window width and height. 
 */}
@@ -24,7 +24,7 @@ Window Dimensions Tracking Function : getCurrentDimension() retrieves the curren
     };
   }
 
-{/* 
+  {/* 
 Window Resize Listener using useEffect : useEffect updates screenSize on window resize, ensuring responsiveness.
 */}
   useEffect(() => {
@@ -40,11 +40,11 @@ Window Resize Listener using useEffect : useEffect updates screenSize on window 
   return (
     <div>
 
-  {/* 
+      {/* 
 Desktop Navigation: 
 The code employs conditional rendering to display a navigation bar exclusively for screens wider than 750 pixels, ensuring an optimized layout for desktop users.
 */}
- {screenSize.width > 750 && (
+      {screenSize.width > 750 && (
         <div className="navBarContainer">
           <div>
             <a href="#home"><h3 className="logo">Campaign<span class="second-text">Butler</span></h3></a>
@@ -60,7 +60,7 @@ The code employs conditional rendering to display a navigation bar exclusively f
         </div>
       )}
 
-{/*
+      {/*
 Mobile Navigation: 
 For screens 750 pixels or narrower, an alternate navigation bar is rendered, featuring a menu icon that, when clicked, reveals a popupContainer for improved mobile usability.
 */}
@@ -78,7 +78,7 @@ For screens 750 pixels or narrower, an alternate navigation bar is rendered, fea
               </div>
             </div>
           </div>
-{/*  
+          {/*  
 The below code helps to toggles the visibility of a vertical popupContainer with navigation links (ex. Services, Pricing, Quick Start, Support, Blog, Contact) when the menu is open. The menu can be closed using a MenuIcon button.
 */}
           {menuOpen ? (
@@ -118,66 +118,57 @@ The below code helps to toggles the visibility of a vertical popupContainer with
         </div>
       )}
 
-{/* 
+      {/* 
 Overview Content: Displays list of sections within a container.
 */}
-      <div className="overAllcontent black_bg">                  
+      <div className="overAllcontent black_bg">
         <div className="container">
-          <div className="overview_nogrid">
-            <h2 className="heading2">Win Your Next Election <br />
+          <div className="overview_nogrid half-screen">
+            <h2 className="main-heading">Win Your Next Election <br />
               with Campaign Butler's <br />
               All-in-One Solution</h2>
             <p className="paragraph">
-              Win Your Next Election
-              with Campaign Butler's
-              All-in-One Solution
+              From digital presence to boots on the ground, we deliver the tools,
+              technology, and expertise that modern campaigns need to connect
+              with voters and secure victory.
             </p>
           </div>
 
           <div className="overview_nogrid">
-            <h2 className="heading2">Image</h2>
-            <p className="paragraph">
-             Just content sections, we can give our own content here.
-            </p>
+
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
-          <div className="overview">
-            <h2 className="heading2">Image</h2>
-            <p className="paragraph">
-             Just content sections, we can give our own content here.
-            </p>
+          <div className="overview_nogrid">
+
           </div>
-          <div className="overview">
-            <h2 className="heading2">The Campaign Challenge</h2>
+          <div className="overview_nogrid half-screen">
+            <h2 className="main-heading black">The Campaign Challenge</h2>
             <p className="paragraph">
-             From digital presence to boots on the ground, we deliver the tools, technology, and expertise that modern campaigns need to connect with voters and secure victory.
+              From digital presence to boots on the ground, we deliver the tools, technology, and expertise that modern campaigns need to connect with voters and secure victory.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
-          <div className="overview">
-            <h2 className="heading2">The Campaign Butler Solution</h2>
+          <div className="overview_nogrid half-screen">
+            <h2 className="main-heading black">The Campaign Butler Solution</h2>
             <p className="paragraph">
-             We've created the first truly integrated campaign platform that handles everything from your domain name to your door-knocking strategy. Our unified approach eliminates communication gaps, reduces costs, and dramatically increases your campaign's effectiveness.
+              We've created the first truly integrated campaign platform that handles everything from your domain name to your door-knocking strategy. Our unified approach eliminates communication gaps, reduces costs, and dramatically increases your campaign's effectiveness.
             </p>
           </div>
           <div className="overview">
-            <h2 className="heading2">Image</h2>
-            <p className="paragraph">
-             Just content sections, we can give our own content here.
-            </p>
+
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h1>Why Winning Campaigns Choose Campaign Butler</h1>
@@ -188,19 +179,19 @@ Overview Content: Displays list of sections within a container.
           <div className="overview">
             <h2 className="heading2">Image</h2>
             <p className="paragraph">
-             Just content sections, we can give our own content here.
+              Just content sections, we can give our own content here.
             </p>
           </div>
           <div className="overview">
             <h2 className="heading2">Unified Strategy, Maximum Impact</h2>
             <p className="paragraph">
-             Stop juggling multiple vendors. Our integrated platform ensures your message stays consistent across every voter touchpoint—saving you time, money, and headaches.
+              Stop juggling multiple vendors. Our integrated platform ensures your message stays consistent across every voter touchpoint—saving you time, money, and headaches.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h1>Trusted by Winning Candidates</h1>
@@ -211,13 +202,13 @@ Overview Content: Displays list of sections within a container.
           <div className="overview">
             <h2 className="heading2">"The volunteer walking app revolutionized our ground game. We knocked 40% more doors with the same number of volunteers."</h2>
             <p className="paragraph">
-             Michael Thompson | County Commissioner
+              Michael Thompson | County Commissioner
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h1>Your Complete Campaign Toolkit</h1>
@@ -235,31 +226,28 @@ Overview Content: Displays list of sections within a container.
           <div className="overview">
             <h2 className="heading2">Image</h2>
             <p className="paragraph">
-             Just content sections, we can give our own content here.
+              Just content sections, we can give our own content here.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent black_bg">                  
+      <div className="overAllcontent black_bg">
         <div className="container">
-          <div className="overview_nogrid">
-            <h2 className="heading2">30+ Years of Campaign Victory Experience</h2>
+          <div className="overview_nogrid half-screen">
+            <h2 className="second-heading">30+ Years of Campaign Victory Experience</h2>
             <p className="paragraph">
               Campaign Butler combines decades of political expertise with cutting-edge marketing technology. We've helped candidates at every level—from school board to statewide office—connect with voters and win elections. Our team understands that exposure wins elections, but only when it's strategic, consistent, and targeted. That's why we've built the only truly integrated campaign marketing platform that unites traditional outreach with digital essentials.
             </p>
           </div>
 
           <div className="overview_nogrid">
-            <h2 className="heading2">Image</h2>
-            <p className="paragraph">
-             Just content sections, we can give our own content here.
-            </p>
+
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h1>Serving Campaigns Nationwide</h1>
@@ -276,25 +264,25 @@ Overview Content: Displays list of sections within a container.
           <div className="overview">
             <h2 className="heading2">Every Race Level</h2>
             <p className="paragraph">
-             From city council to congressional campaigns
+              From city council to congressional campaigns
             </p>
           </div>
           <div className="overview">
             <h2 className="heading2">Specialized Knowledge</h2>
             <p className="paragraph">
-             Expertise in school board, judicial, and other specialized races
+              Expertise in school board, judicial, and other specialized races
             </p>
           </div>
           <div className="overview">
             <h2 className="heading2">Partisan & Non-Partisan</h2>
             <p className="paragraph">
-             Solutions for every type of campaign
+              Solutions for every type of campaign
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h1>Campaign Solutions for Every Budget</h1>
@@ -311,25 +299,25 @@ Overview Content: Displays list of sections within a container.
           <div className="overview">
             <h2 className="heading2">Full Suite Package</h2>
             <p className="paragraph">
-             Everything you need to launch and run a professional campaign $500/month
+              Everything you need to launch and run a professional campaign $500/month
             </p>
           </div>
           <div className="overview">
             <h2 className="heading2">Custom Solutions</h2>
             <p className="paragraph">
-             For larger campaigns with specialized needs
+              For larger campaigns with specialized needs
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h2 className="heading2">Ready to Launch Your
               Winning Campaign?</h2>
             <p className="paragraph">
-             Get started today with Campaign Butler and receive:
+              Get started today with Campaign Butler and receive:
               First Name
               Last Name
               Email
@@ -339,50 +327,50 @@ Overview Content: Displays list of sections within a container.
           <div className="overview">
             <h2 className="heading2">Form Submit</h2>
             <p className="paragraph">
-             Just content sections, we can give our own content here.
+              Just content sections, we can give our own content here.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h2 className="heading2">Image</h2>
             <p className="paragraph">
-             Just content sections, we can give our own content here.
+              Just content sections, we can give our own content here.
             </p>
           </div>
           <div className="overview">
             <h2 className="heading2">Visibility Starts Here. Victory Follows.</h2>
             <p className="paragraph">
-             Don't leave your campaign success to chance. Partner with the experts who understand what it takes to win in today's complex political landscape.
+              Don't leave your campaign success to chance. Partner with the experts who understand what it takes to win in today's complex political landscape.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="overAllcontent">                  
+      <div className="overAllcontent">
         <div className="container">
           <div className="overview">
             <h2 className="heading2">Campaign Butler</h2>
             <p className="paragraph">
-             Win Your Next Election with Campaign Butler's All-in-One Solution
+              Win Your Next Election with Campaign Butler's All-in-One Solution
             </p>
           </div>
           <div className="overview">
             <h2 className="heading2">Footer Link</h2>
             <p className="paragraph">
-             Don't leave your campaign success to chance. Partner with the experts who understand what it takes to win in today's complex political landscape.
+              Don't leave your campaign success to chance. Partner with the experts who understand what it takes to win in today's complex political landscape.
             </p>
           </div>
         </div>
       </div>
 
-{/*
+      {/*
 Footer: Displays a footer with a copyright notice and social media icons (ex. Google, Facebook, Twitter, Instagram).
 */}
-      <footer className="footer">  
+      <footer className="footer">
         <div>
           <p>&copy; 2025 Campaign Butler. All Rights Reserved.</p>
         </div>

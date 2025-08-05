@@ -6,6 +6,10 @@ This website was bootstrapped.
 
 In the website directory, you can run:
 
+### `npm install`
+
+Install all of required dependency module.
+
 ### `npm start`
 
 Runs the app in the development mode.\
