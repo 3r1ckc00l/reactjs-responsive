@@ -27,7 +27,7 @@
 Body Background: Sets a semi-transparent light gray background for the entire webpage body.
 */
 body {
-  background-color: #fff;
+  background-color: #E0E0E0;
   font-family: SchibstedGrotesk-Regular, Georgia, serif;
   color: #000;
 }
@@ -210,6 +210,12 @@ Grid Containers for Content: Defines a grid layout for the overall content, crea
 .main-heading.black {
   color: #000;
 }
+.main-heading .red {
+  color: red;
+}
+.main-heading.secondary {
+  font-size: 34px;
+}
 
 .second-heading {
   color: #fff;
@@ -222,6 +228,10 @@ Grid Containers for Content: Defines a grid layout for the overall content, crea
   border-bottom: 2px solid #efefef;
   padding-bottom: 10px;
   margin-bottom: 15px;
+  font-size: 28px;
+}
+.heading2.no-line {
+  border-bottom: none;
 }
 
 .paragraph {
@@ -236,9 +246,33 @@ Grid Containers for Content: Defines a grid layout for the overall content, crea
 .overview_nogrid {
   padding: 20px;
 }
+.overview_nogrid .overview_split {
+  width: 40%;
+  display: table-cell;
+}
+.overview_nogrid.center {
+  text-align: center;
+  width: 120%;
+}
 
-.overview_nogrid.half-screen {
-  width: 60% !important;
+.overview_nogrid > .option-nav {
+  padding: 10px;
+  color: #000;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.08);
+}
+.overview_nogrid > .option-nav.white {
+  padding: 10px;
+  color: #fff;
+  background-color: red;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.08);
+}
+
+.overview_nogrid > .image-content {
+  width: 120%;
 }
 
 .overAllcontent.black_bg,
@@ -246,29 +280,46 @@ Grid Containers for Content: Defines a grid layout for the overall content, crea
   background-color: #000;
   color: #fff;
 }
+.overAllcontent.blue_bg,
+.overAllcontent.blue_bg .paragraph {
+  background-color: #121B2C;
+  color: #fff;
+}
 
 .overview_nogrid>.paragraph,
 .overview_nogrid>.heading2 {
   color: #000;
+}
+.overview_nogrid>.heading2.white {
+  color: #fff;
 }
 
 /* 
 Footer Styling: Styles the footer with a fixed position at the bottom, a dark background, and white text. The social media icons are displayed in a flex layout for a clean and centered appearance.
 */
 .footer {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 15px;
+  font-size: 22px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: left;
+  float: left;
+  margin-left: 20%;
 }
 
 .icons {
   display: flex;
-  justify-content: center;
-  padding-bottom: 5px;
+  justify-content: right;
+  float: right;
+  margin:20px;
+  margin-right: 20%;
 }
 
 .icons>span {
